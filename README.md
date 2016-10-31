@@ -1,1 +1,1 @@
-# java-path-configure
+# Demo of j2se

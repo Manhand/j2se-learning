@@ -33,12 +33,12 @@ class Name implements Comparable {
 		return firstname + " " + lastname;	
 	}
 	/*
-		重写equals()方法,应该重写hashCode()方法
-		两个对象互相equals,他们之间的hashCode应该相等(当对象用作索引时使用)
+		閲嶅啓equals()鏂规硶,搴旇閲嶅啓hashCode()鏂规硶
+		涓や釜瀵硅薄浜掔浉equals,浠栦滑涔嬮棿鐨刪ashCode搴旇鐩哥瓑(褰撳璞＄敤浣滅储寮曟椂浣跨敤)
 	*/
 	public boolean equals(Object obj) {
 		if(obj instanceof Name) {
-			Name name = (Name)obj;  //强制类型转换
+			Name name = (Name)obj;  //寮哄埗绫诲瀷杞崲
 			return firstname.equals(name.firstname)
 			&& lastname.equals(name.lastname);
 		}	else {
@@ -53,10 +53,9 @@ class Name implements Comparable {
   public int compareTo(Object o) {
   	Name name = (Name)o;
   	int lastCmp = 
-  				lastname.compareTo(name.lastname);	
+  		     lastname.compareTo(name.lastname);	
   
-  	return lastCmp != 0 ? 
-  								lastCmp : 
-  										firstname.compareTo(name.firstname);
+  	return lastCmp != 0 ? lastCmp : 
+  				       firstname.compareTo(name.firstname);
   }
 }
